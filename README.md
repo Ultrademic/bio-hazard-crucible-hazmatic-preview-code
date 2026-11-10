@@ -1,10 +1,16 @@
 # Bio-Hazard Crucible
 
+![Gameplay in the Organic Sector](docs/gameplay.gif)
+
 A 16-bit style biomechanical side-scrolling shmup by [Ultrademic Studios](https://github.com/Ultrademic). Hazmatic is a working title for this project.
 
 Fly a bio-vessel through five crucible sectors, dock between stages, rank up between runs, and spend harvested biomatter in the ship lab. This is a public code preview of the web arcade: custom Canvas 2D engine, studio music, daily challenges, and local plus in-memory cloud saves. There is no hosted demo yet; run it locally to play.
 
 This is an unofficial fan game inspired by Sega's *Bio-Hazard Battle*. It is not affiliated with, endorsed by, or published by Sega.
+
+![Main menu](docs/main-menu.png)
+
+![Arena ship select](docs/arena.png)
 
 ## What I built
 
