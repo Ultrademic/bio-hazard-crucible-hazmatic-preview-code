@@ -2,7 +2,7 @@
 
 A 16-bit style biomechanical side-scrolling shmup by [Ultrademic Studios](https://github.com/Ultrademic). Hazmatic is a working title for this project.
 
-Fly a bio-vessel through five crucible sectors, dock between stages, rank up between runs, and spend harvested biomatter in the ship lab. This public preview is the playable web arcade: custom Canvas 2D engine, studio music, daily challenges, and local plus in-memory cloud saves.
+Fly a bio-vessel through five crucible sectors, dock between stages, rank up between runs, and spend harvested biomatter in the ship lab. This is a public code preview of the web arcade: custom Canvas 2D engine, studio music, daily challenges, and local plus in-memory cloud saves. There is no hosted demo yet; run it locally to play.
 
 This is an unofficial fan game inspired by Sega's *Bio-Hazard Battle*. It is not affiliated with, endorsed by, or published by Sega.
 
@@ -13,9 +13,9 @@ I designed and built the arcade myself, including:
 - A custom 640×360 Canvas 2D engine, driven by `requestAnimationFrame`, with scripted sector waves, bosses, docking between stages, weapon pods, charge shots, and bombs
 - An audio system that plays original studio MP3s for the title, ship lab, and each sector, and uses the Web Audio API to synthesize FM combat sound on the fly
 - Pilot saves in the browser (`localStorage`), plus a small Express API for daily challenges, leaderboards, and cloud-save codes. Those API records stay in server memory, so they reset when the server restarts
-- Input for keyboard, mouse aim, touch, and the standard Gamepad API, including clip-on controllers
+- Input for keyboard, mouse, touch, and the standard Gamepad API, including clip-on controllers
 
-## Play locally
+## Run locally
 
 1. Install dependencies: `npm install`
 2. Start the arcade server: `npm run dev`
