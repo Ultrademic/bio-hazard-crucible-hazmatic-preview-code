@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    overscroll-behavior: none;
+  }
+
+  body {
+    background-color: #070b10;
+    color: #e2e8f0;
+    font-family: 'Chakra Petch', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  body.play-lock {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+/* Letterbox the 16:9 playfield inside the safe area, in both portrait and landscape. */
+.play-stage {
+  container-type: size;
+}
+
+.play-frame {
+  width: min(100cqw, calc(100cqh * 16 / 9));
+  aspect-ratio: 16 / 9;
+}
+
+.font-arcade {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-mono-tech {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* CRT Scanline Filter effect */
+.crt-screen::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.04));
+  z-index: 20;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+.crt-screen::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: radial-gradient(circle at center, transparent 65%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 21;
+  pointer-events: none;
+}
+
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Title screen: softly dims the PRESS START BUTTON line baked into the title art. */
+.title-press-blink {
+  left: 30.5%;
+  top: 37.4%;
+  width: 37%;
+  height: 6.4%;
+  border-radius: 9999px;
+  background: rgba(10, 7, 26, 0.88);
+  filter: blur(5px);
+  pointer-events: none;
+  animation: title-press-blink 1.6s ease-in-out infinite;
+}
+
+@keyframes title-press-blink {
+  0%, 40% { opacity: 0; }
+  55%, 80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title-press-blink { animation: none; opacity: 0; }
+}
