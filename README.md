@@ -6,6 +6,15 @@ Fly a bio-vessel through five crucible sectors, dock between stages, rank up bet
 
 This is an unofficial fan game inspired by Sega's *Bio-Hazard Battle*. It is not affiliated with, endorsed by, or published by Sega.
 
+## What I built
+
+I designed and built the arcade myself, including:
+
+- A custom 640×360 Canvas 2D engine, driven by `requestAnimationFrame`, with scripted sector waves, bosses, docking between stages, weapon pods, charge shots, and bombs
+- An audio system that plays original studio MP3s for the title, ship lab, and each sector, and uses the Web Audio API to synthesize FM combat sound on the fly
+- Pilot saves in the browser (`localStorage`), plus a small Express API for daily challenges, leaderboards, and cloud-save codes. Those API records stay in server memory, so they reset when the server restarts
+- Input for keyboard, mouse aim, touch, and the standard Gamepad API, including clip-on controllers
+
 ## Play locally
 
 1. Install dependencies: `npm install`
