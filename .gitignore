@@ -9,3 +9,4 @@ coverage/
 .playwright-mcp/
 *.bak
 *.bak-rename
+bun.lock
